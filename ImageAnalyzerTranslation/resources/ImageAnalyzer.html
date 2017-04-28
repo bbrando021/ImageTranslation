@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="CMPSC 421 Project, Image Analyzer and Translator">
+        <meta name="keywords" content="HTML,CSS,JavaScript">
+        <meta name="author" content="Elijah Rydzewski, Bradley Steen, Brandon Bench, Patrick Frawley, Vincent Stankiewicz">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="Core.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        
+
+        <title>Team 7 Project</title>
+    </head>
+
+    <body>
+        
+        <img src = "/Logo.png" id="logo" align="middle" />
+       
+
+        <table id="Display">
+            <td>
+                <table>
+                    <td>
+                        <!-- Method to select the language to start translation from, due to nuaces in implementation, delayed
+                        <form action="" id="LanguageOptions" style="float:left; padding-left: 20px;" onchange="langChange(0,'Initial')">
+                            <fieldset id="InitialFieldSet">
+                                <legend id="InitialLegend">Initial Language</legend>
+                                <input type="radio" name="Initial" value="English" checked="checked"> English<br>
+                                <input type="radio" name="Initial" value="Spanish"> Spanish<br>
+                                <input type="radio" name="Initial" value="French"> French<br>
+                                <input type="radio" name="Initial" value="German"> German<br>
+                                <input type="radio" name="Initial" value="Italian"> Italian<br>
+                                <input type="radio" name="Initial" value="Portuguese"> Portuguese
+                            </fieldset>
+                        </form> 
+                        -->
+                        <form onchange="langChange(1,'Desired')">
+                            <fieldset id="DesiredFieldSet">
+                                <legend id="DesiredLegend">Desired Language</legend>
+                                <input type="radio" name="Desired" value="English" checked="checked"> English<br>
+                                <input type="radio" name="Desired" value="Spanish"> Spanish<br>
+                                <input type="radio" name="Desired" value="French"> French<br>
+                                <input type="radio" name="Desired" value="German"> German<br>
+                                <input type="radio" name="Desired" value="Italian"> Italian<br>
+                                <input type="radio" name="Desired" value="Portuguese"> Portuguese
+                            </fieldset>
+                        </form>
+                    </td>
+                    <td>
+                        <br>
+                        <button class="button" id="choose" onclick="$('#file').click()">Choose</button><br><br>
+                        <input class="button" type="submit" value="Upload" id="submit" ><br><br>
+                        <button class="button" id="translate">Translate</button>
+                    </td>
+                </table>
+                <table>
+                    <td>
+                        <p id="InitialLanguageLabel" class="translationLabel"></p>
+                        <p class="ImageDescriptions" id="InitialLanguageImageDescription1"></p>
+                        <p class="ImageDescriptions" id="InitialLanguageImageDescription2"></p>
+                        <p class="ImageDescriptions" id="InitialLanguageImageDescription3"></p>
+                    </td>
+                    <td>
+                        <p id="FinalLanguageLabel" class="translationLabel"></p>
+                        <p class="ImageDescriptions" id="FinalLanguageImageDescription1"></p>
+                        <p class="ImageDescriptions" id="FinalLanguageImageDescription2"></p>
+                        <p class="ImageDescriptions" id="FinalLanguageImageDescription3"></p>
+                    </td>
+                </table>
+            </td>
+
+            <td height="400px">
+                <div class="w3-card-4"><img  src = "/HowTo.png" id="UserPicture" alt="Missing image"></div>
+            </td>
+        </table>
+        <input type='file' name="file" id="file" value="" onchange="readURL(this)" style="opacity:0"/>
+    </body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="ScriptSource.js"></script>
+
+</html>
